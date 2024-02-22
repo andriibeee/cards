@@ -49,7 +49,7 @@ func CheckCreditCardMonth(month string) bool {
 		return false
 	}
 	n, err := strconv.Atoi(month)
-	return err != nil || n >= 1 && n <= 12
+	return err == nil && n >= 1 && n <= 12
 }
 
 func CheckCreditCardNumber(number string) bool {
